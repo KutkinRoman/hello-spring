@@ -1,0 +1,16 @@
+#  scp docker-compose.yml root@95.163.236.150:~/spring-server/docker-compose.yml
+
+version: '3.8'
+services:
+
+  app-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: java -jar ./app.jar
+    restart: always
+    image: 'roman2301/hello_spring'
+    ports:
+      - 80:80
+
+
