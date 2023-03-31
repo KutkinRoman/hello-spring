@@ -18,7 +18,7 @@ public class HelloSpringApplication {
 
     @GetMapping("/")
     public String index() {
-        return "docker-compose";
+        return "docker-compose 3";
     }
 
 
