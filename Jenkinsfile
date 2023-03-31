@@ -15,8 +15,8 @@ pipeline {
         stage("Build and Publish Image") {
             steps {
                 echo 'Build and Publish Image start'
-                sh 'sudo docker-compose build'
-                sh 'sudo docker-compose push'
+                sh 'sudo docker-compose -f docker/docker-compose.yml build'
+                sh 'sudo docker-compose -f docker/docker-compose.yml push'
                 echo 'Build and Publish Image start'
             }
         }
@@ -25,6 +25,7 @@ pipeline {
             steps {
                 echo 'Deploy start'
                 sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml stop'
+                sh 'docker/docker-compose.prod.yml > /root/docker-files/hello-spring.yml'
                 sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml pull'
                 sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml up -d'
                 echo 'Deploy  end'

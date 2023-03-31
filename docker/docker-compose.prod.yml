@@ -1,0 +1,15 @@
+
+# PROD
+
+version: '3.8'
+
+services:
+
+  hello_spring:
+    command: java -jar ./app.jar
+    restart: always
+    image: 'roman2301/hello_spring'
+    ports:
+      - 9090:9090
+
+

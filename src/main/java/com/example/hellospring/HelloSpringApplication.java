@@ -18,7 +18,7 @@ public class HelloSpringApplication {
 
     @GetMapping("/")
     public String index() {
-        return "SUDO DOCKER_COMPOSE BUILD AND PUSH";
+        return "docker/docker-compose.prod.yml > /root/docker-files/hello-spring.yml";
     }
 
 
