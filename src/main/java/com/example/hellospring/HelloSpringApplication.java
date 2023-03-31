@@ -18,7 +18,7 @@ public class HelloSpringApplication {
 
     @GetMapping("/")
     public String index() {
-        return "Index v1.0.0";
+        return "Index v1.0.1";
     }
 
 
