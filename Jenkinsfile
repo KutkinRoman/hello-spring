@@ -21,7 +21,7 @@ pipeline {
 
       steps {
         echo 'Deploy start'
-        sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml down'
+        sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml stop'
         sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml pull'
         sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml up -d'
         echo 'Deploy  end'
