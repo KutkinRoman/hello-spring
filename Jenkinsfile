@@ -21,9 +21,9 @@ pipeline {
 
       steps {
         echo 'Deploy start'
-        sh 'ssh root@194.67.67.249 sudo docker-compose -f /root/docker-files/hello-spring.yml down'
-        sh 'ssh root@194.67.67.249 sudo docker-compose -f /root/docker-files/hello-spring.yml pull'
-        sh 'ssh root@194.67.67.249 sudo docker-compose -f /root/docker-files/hello-spring.yml up -d'
+        sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml down'
+        sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml pull'
+        sh 'sudo docker-compose -f /root/docker-files/hello-spring.yml up -d'
         echo 'Deploy  end'
       }
 
