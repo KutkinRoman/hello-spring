@@ -18,7 +18,7 @@ public class HelloSpringApplication {
 
     @GetMapping("/")
     public String index() {
-        return "docker/docker-compose.prod.yml > /root/docker-files/hello-spring.yml";
+        return "cat docker/docker-compose.prod.yml > /root/docker-files/hello-spring.yml";
     }
 
 
