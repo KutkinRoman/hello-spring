@@ -7,16 +7,16 @@ pipeline {
 
         stage("Verify Tooling") {
             steps {
-                sh 'docker version'
-                sh 'docker-compose version'
+                sh 'sudo docker version'
+                sh 'sudo docker-compose version'
             }
         }
 
         stage("Build and Publish Image") {
             steps {
                 echo 'Build and Publish Image start'
-                sh 'docker-compose build'
-                sh 'docker-compose push'
+                sh 'sudo docker-compose build'
+                sh 'sudo docker-compose push'
                 echo 'Build and Publish Image start'
             }
         }

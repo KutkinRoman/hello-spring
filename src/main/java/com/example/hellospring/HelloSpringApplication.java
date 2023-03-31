@@ -18,7 +18,7 @@ public class HelloSpringApplication {
 
     @GetMapping("/")
     public String index() {
-        return "DOCKER_COMPOSE BUILD AND PUSH";
+        return "SUDO DOCKER_COMPOSE BUILD AND PUSH";
     }
 
 
