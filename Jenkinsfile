@@ -15,6 +15,8 @@ pipeline {
         stage("Build and Publish Image") {
             steps {
                 echo 'Build and Publish Image start'
+                sh 'docker-compose build'
+                sh 'docker-compose push'
                 echo 'Build and Publish Image start'
             }
         }
