@@ -18,7 +18,7 @@ public class HelloSpringApplication {
 
     @GetMapping("/")
     public String index() {
-        return "Docker Info";
+        return "Docker Info 2";
     }
 
 
